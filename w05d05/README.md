@@ -106,7 +106,12 @@ GET /login/8
 
 
 ### Splitting up the Work
-* 
+* Horizontal - every member is working on the same layer
+* Vertical - each member working on a diff layer
+* Pair Programming
+
+
+
 
 
 
