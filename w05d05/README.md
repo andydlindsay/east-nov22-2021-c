@@ -56,7 +56,13 @@
 ```js
 // do this instead
 app.get('/login/:id', (req, res) => {
+  // cookie-session middleware
   req.session.user_id = req.params.id;
+
+  // cookie-parser middleware
+  res.cookie('user_id', req.params.id);
+
+  // send the user somewhere
   res.redirect('/');
 });
 ```
