@@ -1,4 +1,4 @@
-import { announceResult } from '../helpers'
+import { announceResult, cheatingOrNah } from '../helpers'
 
 describe('announceResult function', () => {
   let fakeState;
@@ -33,4 +33,29 @@ describe('announceResult function', () => {
   test('returns "Waiting" if nothing is passed in', () => {
     expect(announceResult()).toBe('Waiting');
   });
+});
+
+describe('cheatingOrNah function', () => {
+
+  test('if cheating is false, returns a valid choice', () => {
+    const cheating = false;
+    const playerSelection = 'Axe';
+
+    const actual = cheatingOrNah(playerSelection, cheating);
+
+    const items = ['Moai', 'Axe', 'Tree'];
+
+    // expect(items.includes(actual)).toBe(true);
+    expect(items).toContain(actual);
+  });
+
+  test('if cheating is true, returns the winning choice', () => {
+    const cheating = true;
+    const playerSelection = 'Axe';
+
+    const actual = cheatingOrNah(playerSelection, cheating);
+
+    expect(actual).toBe('Moai');
+  });
+
 });
