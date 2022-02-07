@@ -1,0 +1,9 @@
+<h1>All the characters for <%= @city.name %>!</h1>
+
+<%= link_to "View the cities", cities_path %>
+
+<!-- <% @characters.each do |character| %>
+  <%= render 'character', character: character %>
+<% end %> -->
+
+<%= render @characters %>

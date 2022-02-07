@@ -1,0 +1,9 @@
+<h1>All the cities in the database</h1>
+
+
+<% @cities.each do |city| %>
+  <div class="city">
+    <h2>Name: <%= city.name %></h2>
+    <%= link_to "The Characters", city_characters_path(city) %>
+  </div>
+<% end %>
